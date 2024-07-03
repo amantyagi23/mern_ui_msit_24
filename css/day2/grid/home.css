@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  grid-area: header;
+}
+.main {
+  grid-area: main;
+}
+.left {
+  grid-area: left;
+}
+.right {
+  grid-area: right;
+}
+.footer {
+  grid-area: footer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "main main main main main header header"
+    "main main main main main right right"
+    "left footer footer footer footer footer footer";
+}
+
+.grid-container > div {
+  background-color: blue;
+  border: 5px solid black;
+  color: white;
+  padding: 100px;
+}
