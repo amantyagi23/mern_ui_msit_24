@@ -147,5 +147,83 @@
         </div>
       </div>
     </section>
+
+    <div class="container">
+      <main>
+        <section class="carsual">
+          <div class="carusal-inner">
+            <div class="carsual-item">
+              <img
+                src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/77dd9045daf65f13.jpg?q=20"
+                alt=""
+              />
+            </div>
+            <div class="carsual-item">
+              <img
+                src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/54ae867c95cb06e2.jpg?q=20"
+                alt=""
+              />
+            </div>
+            <div class="carsual-item">
+              <img
+                src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/9384b37a848c5e60.jpg?q=20"
+                alt=""
+              />
+            </div>
+            <div class="carsual-item">
+              <img
+                src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/9e9aa250dfecdbc3.jpg?q=20"
+                alt=""
+              />
+            </div>
+
+            <button class="action-btn left-action" onclick="prevImg()">
+              &#8592;
+            </button>
+            <button class="action-btn right-action" onclick="nextImg()">
+              &#8594;
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      let index = 0;
+      let slides = document.querySelector(".carusal-inner");
+      let totalslides = document.querySelectorAll(".carsual-item");
+      console.log(totalslides.length);
+      console.log(totalslides[1]);
+
+      function showSlide(i) {
+        if (i >= totalslides.length) {
+          index = 0;
+          i = 0;
+        } else if (i < 0) {
+          index = totalslides.length - 1;
+          i = totalslides.length - 1;
+        }
+        const currSlide = totalslides[i];
+        currSlide.classList.toggle("active");
+      }
+
+      function prevImg() {
+        showSlide(index);
+        index = index - 1;
+        showSlide(index);
+      }
+      function nextImg() {
+        showSlide(index);
+        index = index + 1;
+        showSlide(index);
+      }
+      showSlide(index);
+      setInterval(bindEvents, 4000);
+      function bindEvents() {
+        showSlide(index);
+        index = index + 1;
+        showSlide(index);
+      }
+    </script>
   </body>
 </html>

@@ -96,3 +96,81 @@ nav ul li button.login {
 .subnavbar .item h6 {
   font-size: larger;
 }
+
+.carsual {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carsual-item {
+  width: 100%;
+  display: none;
+  opacity: 0;
+}
+.active {
+  display: block;
+  opacity: 1;
+}
+
+/* .carsual-item {
+  width: 100%;
+  animation-name: slide;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 5s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(0%);
+  }
+  25% {
+    transform: translate(-100%);
+  }
+  30% {
+    transform: translate(-100%);
+  }
+  50% {
+    transform: translate(-200%);
+  }
+  55% {
+    transform: translate(-200%);
+  }
+  75% {
+    transform: translate(-300%);
+  }
+  80% {
+    transform: translate(-300%);
+  }
+  95% {
+    transform: translate(-400%);
+  }
+  100% {
+    transform: translate(-400%);
+  }
+} */
+
+.carsual-inner {
+  position: relative;
+}
+
+.action-btn {
+  position: absolute;
+  font-size: 2em;
+  padding: 10px;
+}
+
+.left-action {
+  left: 100px;
+}
+
+.right-action {
+  right: 100px;
+}
+
+@media (min-width >= 576px) {
+  .carsual-inner {
+    width: 10%;
+  }
+}

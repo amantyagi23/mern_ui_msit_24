@@ -34,3 +34,18 @@
   color: white;
   padding: 100px;
 }
+
+@media (max-width: 576px) {
+  .grid-container > div {
+    font-size: 5em;
+  }
+  .grid-container {
+    grid-template-areas:
+      "header header header"
+      "left left right"
+      "main main main"
+      "footer footer footer";
+  }
+
+  :hover ;
+}
